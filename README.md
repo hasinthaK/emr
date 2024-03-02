@@ -15,7 +15,7 @@ PySpark & Hive Scripts use a set of predetermined S3 locations hence the directo
 - Make sure your Hadoop EMR cluster is started & in waiting state.
 - Add a step with the type Hive Application with the script & specify the S3 locations.
 
-Hive script can be run multiple times with a CLI argument `ITERATION`. Specify the current index of iteration strating from 0. In EMR Step, add `-hivevar ITERATION=<iteration index>`. ie: `hivevar ITERATION=0` for first iteration.
+Hive script can be run multiple times with a CLI argument `ITERATION`. Specify the current index of iteration strating from 0. In EMR Step, add `-hivevar ITERATION=<iteration index>`. ie: `-hivevar ITERATION=0` for first iteration.
 In each iteration, the source csv might get removed from S3, if so please upload it again & run the next iteration as a new step with the new `ITERATION`.
 
 ## Running PySpark Script
