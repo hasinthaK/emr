@@ -18,11 +18,18 @@ PySpark & Hive Scripts use a set of predetermined S3 locations hence the directo
 Hive script can be run multiple times with a CLI argument `ITERATION`. Specify the current index of iteration strating from 0. In EMR Step, add `-hivevar ITERATION=<iteration index>`. ie: `hivevar ITERATION=0` for first iteration.
 In each iteration, the source csv might get removed from S3, if so please upload it again & run the next iteration as a new step with the new `ITERATION`.
 
-## Runnin PySpark Script
+## Running PySpark Script
 
 - Make sure your Spark EMR cluster is started & in waiting state.
-- Add a step with the type Spark Application with the script & specify the S3 locations. 
-No CLI arguments are supported as script itself loops for 5 times.
+- Add a step with the type Spark Application with the script & specify the S3 locations.
+- Provide necessary arguments for the script in step Arguments.
+
+```
+--data_source s3://<data source file>
+--output_uri s3://<output folder> 
+```
+
+No other CLI arguments are supported as script itself loops for 5 times.
 
 </br>
 
