@@ -23,3 +23,11 @@ In each iteration, the source csv might get removed from S3, if so please upload
 - Make sure your Spark EMR cluster is started & in waiting state.
 - Add a step with the type Spark Application with the script & specify the S3 locations. 
 No CLI arguments are supported as script itself loops for 5 times.
+
+</br>
+
+---
+
+To download the S3 results to your local machine, you may use AWS CLI.
+ie: `aws s3 cp s3://<s3-folder> <destination-folder> --recursive --profile learner-lab`
+Before running above ensure that AWS CLI ACCESS_KEY & SECRET_ACCESS_KEY are in place. (`~/.aws/credentials`). Also create a new aws profile named `learner-lab` with aws cli credentials.
