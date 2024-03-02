@@ -1,5 +1,4 @@
 import argparse
-import time
 
 from pyspark.sql import SparkSession
 
