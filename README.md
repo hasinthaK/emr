@@ -1,5 +1,7 @@
 # UoM MapReduce vs Spark Assignment Scripts
 
+## Index: 248201V - A.M.K.H.K Abeykoon
+
 ## Preparing S3 for scripts
 
 PySpark & Hive Scripts use a set of predetermined S3 locations hence the directories can be created upfront if needed. This process is automated via a simple python script. Follow below instructions to create the directory structure on your AWS S3 bucket.
