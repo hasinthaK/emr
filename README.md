@@ -40,3 +40,9 @@ No other CLI arguments are supported as script itself loops for 5 times.
 To download the S3 results to your local machine, you may use AWS CLI.
 ie: `aws s3 cp s3://<s3-folder> <destination-folder> --recursive --profile learner-lab`
 Before running above ensure that AWS CLI ACCESS_KEY & SECRET_ACCESS_KEY are in place. (`~/.aws/credentials`). Also create a new aws profile named `learner-lab` with aws cli credentials.
+
+---
+
+### Analysis graphs
+
+Refer [Google Sheet](https://docs.google.com/spreadsheets/d/14NIHo_5mOyBDAhcMlHmKaP9mOnUXFapwHHRUBycWCwA/edit?usp=sharing).
